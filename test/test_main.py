@@ -41,6 +41,8 @@ class TestKaprekarRoutine(unittest.TestCase):
         self.assertEqual(kaprekar_routine(1234, 4), 6174)
         self.assertEqual(kaprekar_routine(123, 3), 495)
         self.assertEqual(kaprekar_routine(2111, 4), 6174)
+        self.assertEqual(kaprekar_routine(576, 3), 495)
+        self.assertEqual(kaprekar_routine(495, 3), 495)
         
 
 if __name__ == "__main__":
