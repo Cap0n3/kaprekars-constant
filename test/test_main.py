@@ -26,11 +26,12 @@ class TestKaprekarRoutine(unittest.TestCase):
         self.assertFalse(is_three_or_four_digits(34565))
     
     def test_kaprekar_routine(self):
-        self.assertEqual(kaprekar_routine(1234, 4), 6174)
-        self.assertEqual(kaprekar_routine(123, 3), 495)
-        self.assertEqual(kaprekar_routine(2111, 4), 6174)
-        self.assertEqual(kaprekar_routine(576, 3), 495)
-        self.assertEqual(kaprekar_routine(495, 3), 495)
+        for input_nb in range(1000, 9999):
+            if len(set(str(input_nb))) > 1:
+                self.assertEqual(kaprekar_routine(input_nb, len(str(input_nb))), 6174)
+        for input_nb in range(100, 999):
+            if len(set(str(input_nb))) > 1:
+                self.assertEqual(kaprekar_routine(input_nb, len(str(input_nb))), 495)
         
 if __name__ == "__main__":
     unittest.main()
